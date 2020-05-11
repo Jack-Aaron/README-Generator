@@ -59,7 +59,15 @@ function init() {
                 name: "contribute"
             }
 
-        ])
+        ]).then(function(data) {
+  
+            if (err) {
+              console.log(err);
+            }
+            else {
+              console.log("Success!");
+            }
+          });
 }
 
 init();
