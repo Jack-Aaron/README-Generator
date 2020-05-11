@@ -1,4 +1,6 @@
 
+var inquirer = require("inquirer");
+
 const questions = [
     "What is your Github user name?",
     "What is the project Repo URL?",
