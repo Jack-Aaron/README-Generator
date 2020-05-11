@@ -60,21 +60,22 @@ function init() {
                 name: "contribute"
             }
 
-        ]).then(function(data) {
+        ]).then(function (data) {
 
-            var fileName = README.md;
+            var fileName = 'README.md';
 
-            fs.writeFile(fileName, generateMarkdown(data), err) {
+            fs.writeFile(fileName, generateMarkdown(data), function (err) {
 
-            }
-  
-            if (err) {
-              console.log(err);
-            }
-            else {
-              console.log("Success!");
-            }
-          });
+
+
+                if (err) {
+                    console.log(err);
+                }
+                else {
+                    console.log("Success!");
+                }
+            });
+        })
 }
 
 init();
