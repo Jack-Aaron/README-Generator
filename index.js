@@ -14,6 +14,50 @@ function writeToFile(fileName, data) {
 }
 
 function init() {
+    inquirer
+        .prompt([
+            {
+                type: "input",
+                message: questions[0],
+                name: "username"
+            },
+            {
+                type: "input",
+                message: questions[1],
+                name: "url"
+            },
+            {
+                type: "input",
+                message: questions[2],
+                name: "title"
+            },
+            {
+                type: "input",
+                message: questions[3],
+                name: "description"
+            },
+            {
+                type: "input",
+                message: questions[4],
+                name: "installation"
+            },
+            {
+                type: "input",
+                message: questions[5],
+                name: "usage"
+            },
+            {
+                type: "input",
+                message: questions[6],
+                name: "license"
+            },
+            {
+                type: "input",
+                message: questions[7],
+                name: "contribute"
+            }
+
+        ])
 }
 
 init();
