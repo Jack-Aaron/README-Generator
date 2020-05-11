@@ -1,5 +1,6 @@
 
 var inquirer = require("inquirer");
+var fs = require("fs");
 
 const questions = [
     "What is your Github user name?",
@@ -60,6 +61,12 @@ function init() {
             }
 
         ]).then(function(data) {
+
+            var fileName = README.md;
+
+            fs.writeFile(fileName, generateMarkdown(data), err) {
+
+            }
   
             if (err) {
               console.log(err);
