@@ -1,6 +1,5 @@
 function generateMarkdown(data) {
-  return `
-# ${data.title}
+  return `# ${data.title}
 ${data.description}
 
 ## Installation 
@@ -10,12 +9,10 @@ ${data.installation}
 ${data.usage}
 
 ## License
-${data.license}
+This Readme Generator is under the ${data.license} license.
 
 ## How You Can Contribute
-${data.contribute}
-
-`;
+${data.contribute}`;
 }
 
 module.exports = generateMarkdown;

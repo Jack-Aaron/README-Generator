@@ -1,13 +1,16 @@
 
-# tiutle
+# README-Generator
+This application will automatically generate a Readme file for a Github project upon user input.
 
-## dasfdadsf
+## Installation 
+Simply download all the files and type "node index.js" into your console. You must have Node.js installed.
 
-## oijawoiefjawoeifjo instrutions
+## Usage
+Anyone can use this!
 
-## usage
+## License
+MIT
 
-## license 1
-
-## by helping
+## How You Can Contribute
+Clone the repository and fork the master branch! Let's make this awesome!
 
