@@ -1,7 +1,7 @@
-
-var inquirer = require("inquirer");
-var fs = require("fs");
-var generateMarkdown = require("./utils/generateMarkdown.js");
+const axios = require('axios');
+const inquirer = require("inquirer");
+const fs = require("fs");
+const generateMarkdown = require("./utils/generateMarkdown.js");
 
 const questions = [
     "What is your Github user name?",
@@ -62,17 +62,30 @@ function init() {
             }
 
         ]).then(function (data) {
+            
+            axios.get(`/user?ID=${data.username}`)
+  .then(function (response) {
+    // handle success
+    console.log(response);
+  })
+  .catch(function (error) {
+    // handle error
+    console.log(error);
+  })
+  .then(function () {
+    // always executed
+  });
 
-            var fileName = 'README.md';
+            // var fileName = 'README.md';
 
-            fs.writeFile(fileName, generateMarkdown(data), function (err) {
-                if (err) {
-                    console.log(err);
-                }
-                else {
-                    console.log("Success!");
-                }
-            });
+            // fs.writeFile(fileName, generateMarkdown(data), function (err) {
+            //     if (err) {
+            //         console.log(err);
+            //     }
+            //     else {
+            //         console.log("Success!");
+            //     }
+            // });
         })
 }
 
